@@ -43,6 +43,13 @@
     </div>
 
     <div class="control-group">
+      <%= label_tag :encoding_arguments, nil, class: 'control-label' %>
+      <div class="controls">
+        <%= text_field_tag :encoding_arguments, @job.try(:encoding_arguments), class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="control-group">
       <%= label_tag :priority, nil, class: 'control-label' %>
       <div class="controls">
         <%= text_field_tag :priority, @job.try(:priority), class: 'form-control' %>
