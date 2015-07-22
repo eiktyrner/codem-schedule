@@ -44,6 +44,7 @@ class Job < ActiveRecord::Base
                 destination_file: options['output'],
                 preset: Preset.find_by_name(options['preset']),
                 priority: options['priority'],
+                encoding_arguments: options['encoding_arguments'],
                 notifications: Notification.from_api(options[:notify]),
                 arguments: args)
 
